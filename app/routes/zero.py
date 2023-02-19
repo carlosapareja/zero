@@ -21,7 +21,7 @@ def generate(size):
 def pass_generator():
     password = GeneratedPassword()
 
-    if password.is_submitted:
+    if password.is_submitted():
         x = password.size.data
         z = generate(x)
         password.password.data = z

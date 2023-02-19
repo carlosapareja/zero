@@ -16,9 +16,29 @@
                     {{ password.generate_password(class="uk-button uk-button-default generar", placeholder="") }}
                 </div>
                 <div class="uk-margin" uk-margin>
-                    <label class="uk-form-label" for="password-len">Password length: <span id="range-value" class="uk-badge"></span></label>
+                    <div class="space">
+                        <label class="uk-form-label" for="password-len">Password length:</label>
+                        <span id="range-value" class="uk-badge"></span>
+                    </div>
                     {{ password.password_length(class="uk-range", placeholder="") }}
                     <!-- <input class="uk-range" type="range" value="2" min="6" max="66" step="1" aria-label="Range"> -->
+                </div>
+
+                <div class="uk-form-toggle space">
+                    <label for="include_lowercase" class="text-style">Include lowercase:</label>
+                    {{ password.include_lowercase(class="uk-checkbox swith-style") }}
+                </div>
+                <div class="uk-form-toggle space">
+                    <label for="" class="text-style">Include uppercase:</label>
+                    {{ password.include_uppercase(class="uk-checkbox") }}
+                </div>
+                <div class="uk-form-toggle space">
+                    <label for="" class="text-style">Include numbers:</label>
+                    {{ password.include_numbers(class="uk-checkbox") }}
+                </div>
+                <div class="uk-form-toggle space">
+                    <label for="" class="text-style">Include symbols:</label>
+                    {{ password.include_symbols(class="uk-checkbox") }}
                 </div>
             </form>
         </div>

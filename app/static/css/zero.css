@@ -76,4 +76,17 @@
     padding-top: 5px;
 }
 
+.footer{
+    font-size: 10px;
+    text-align: center;
+}
+
+.footer a{
+    color: #666666;
+    border: 0;
+}
+
+.footer a:hover{
+    color: var(--border-color);
+}
 

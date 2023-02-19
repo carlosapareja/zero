@@ -13,7 +13,7 @@ class GeneratedPassword(FlaskForm):
     include_uppercase = BooleanField('Include uppercase')
     include_numbers = BooleanField('Include numbers')
     include_symbols = BooleanField('Include symbols')
-    generate_password = SubmitField('', id='generate')
+    # generate_password = SubmitField('', id='generate')
 
 def generate(length, use_lower=True, use_upper=True, use_digits=True, use_punctuation=True):
     characters = ""
@@ -46,15 +46,14 @@ def pass_generator():
         password_length = password.password_length.data
 
         if use_upper == False and use_lower == False and use_numbers == False and use_symbols == False:
+            flash(f'Please, choose an option', category='danger')
             password.password_text.data = 'Choose an option'
-            # final_password = generate(password_length, use_lower=True, use_upper=True, use_digits=True, use_punctuation=True)
         else:
             final_password = generate(password_length, use_lower, use_upper, use_numbers, use_symbols)
             password.password_text.data = final_password
 
-
-
     context = {
         'password': password
     }
+
     return render_template('zero.html', **context)

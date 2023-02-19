@@ -1,11 +1,13 @@
 {% extends 'base.html'%}
 {% block content %}
     <div class="uk-card uk-card-default uk-card-small card">
+
         <div class="uk-card-header uk-flex uk-flex-column uk-flex-middle" style="border-bottom: 0; padding-top: 40px;">
             <img src="{{ url_for('static', filename='img/password.png') }}" alt="Zero" width="60" height="60">
             <span class="title">Zero<b>Pass</b></span>
             <span class="subtitle">Password Generator</span>
         </div>
+
         <div class="uk-card-body uk-card-small uk-flex uk-flex-column uk-flex-middle">
             <form class="uk-form-horizontal uk-margin-large form-style" action="{{ url_for('zero.pass_generator') }}" method="post">
                 <div class="uk-margin">
@@ -22,7 +24,6 @@
                     </div>
                     {{ password.password_length(class="uk-range", placeholder="") }}
                 </div>
-
                 <div class="uk-form-toggle space">
                     <label for="include_lowercase" class="text-style">Include lowercase:</label>
                     {{ password.include_lowercase(class="uk-checkbox swith-style") }}
@@ -41,6 +42,7 @@
                 </div>
             </form>
         </div>
+        
         <div class="uk-card-footer footer" style="border-top: 0;">
             <span class="">Hecho con &#128150; por <b><a href="https://github.com/Sebas1012" target="_blank">sebas1012</a></b>.</span>
         </div>

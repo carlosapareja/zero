@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/zero.css') }}">
+    <!-- CSS Frameworks -->
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.21/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.21/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.21/dist/js/uikit-icons.min.js"></script>
+
+    <title>Zero</title>
+</head>
+
+<body class="uk-flex uk-flex-column uk-flex-center uk-flex-middle">
+    {% block content %}
+
+    {% endblock %}
+    <!-- <footer class="uk-width-1-1">
+        <span class="uk-position-center">Hecho con &#128150; por <b><a href="https://github.com/Sebas1012" target="_blank">sebas1012</a></b>.</span>
+    </footer> -->
+</body>
+
+</html>

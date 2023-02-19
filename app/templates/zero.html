@@ -1,0 +1,25 @@
+{% extends 'base.html '%}
+{% block content %}
+    <div class="uk-card uk-card-default uk-width-1-4 card">
+        <div class="uk-card-header uk-flex uk-flex-column uk-flex-middle" style="border-bottom: 0; padding-top: 40px;">
+            <img src="{{ url_for('static', filename='img/password.png') }}" alt="Zero" width="60" height="60">
+            <span class="title">Zero<b>Pass</b></span>
+            <span class="subtitle">Password Generator</span>
+        </div>
+        <div class="uk-card-body uk-card-small uk-flex uk-flex-column uk-flex-middle">
+            <form class="uk-form-horizontal uk-margin-large form-style" action="{{ url_for('zero.pass_generator') }}" method="post">
+                <div class="uk-margin" uk-margin>
+                    <div uk-form-custom="target: true">
+                        {{ password.password(class="uk-input", placeholder="Password") }}
+                    </div>
+                    {{ password.submit(class="uk-button uk-button-default generar", placeholder="") }}
+                    <!-- <a class="uk-button uk-button-default generar" type="button" uk-icon="icon: refresh"></a> -->
+                </div>
+                <div class="uk-margin">
+                    {{ password.size(class="uk-range", placeholder="") }}
+                    <!-- <input class="uk-range" type="range" value="2" min="6" max="66" step="1" aria-label="Range"> -->
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,52 @@
+:root{
+    --primary-color: #eb0c23;
+    --border-color: #bfbfbf
+}
+
+.card{
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    border-style: dashed;
+}
+
+.card-head{
+    border-bottom: 0;
+    padding-top: 20px;
+}
+
+.title{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.title b{
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+.subtitle{
+    font-size: 11px;
+}
+
+.generar{
+    background-color: var(--primary-color);
+}
+
+.generar span{
+    color: white;
+}
+
+.form-style input{
+    border-radius: 10px;
+}
+
+.form-style input:focus{
+    border-color: var(--primary-color);
+}
+
+.form-style a{
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: 0;
+}

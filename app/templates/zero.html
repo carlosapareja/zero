@@ -8,15 +8,16 @@
         </div>
         <div class="uk-card-body uk-card-small uk-flex uk-flex-column uk-flex-middle">
             <form class="uk-form-horizontal uk-margin-large form-style" action="{{ url_for('zero.pass_generator') }}" method="post">
-                <div class="uk-margin" uk-margin>
-                    <div uk-form-custom="target: true">
-                        {{ password.password(class="uk-input", placeholder="Password") }}
-                    </div>
-                    {{ password.submit(class="uk-button uk-button-default generar", placeholder="") }}
-                    <!-- <a class="uk-button uk-button-default generar" type="button" uk-icon="icon: refresh"></a> -->
-                </div>
                 <div class="uk-margin">
-                    {{ password.size(class="uk-range", placeholder="") }}
+                    <div class="uk-inline">
+                        <a id="copy" class="uk-form-icon uk-form-icon-flip" onclick="copyPassword()"><i class="fa-regular fa-clone"></i></a>
+                        {{ password.password_text(class="uk-input", placeholder="Password") }}
+                    </div>
+                    {{ password.generate_password(class="uk-button uk-button-default generar", placeholder="") }}
+                </div>
+                <div class="uk-margin" uk-margin>
+                    <label class="uk-form-label" for="password-len">Password length: <span id="range-value" class="uk-badge"></span></label>
+                    {{ password.password_length(class="uk-range", placeholder="") }}
                     <!-- <input class="uk-range" type="range" value="2" min="6" max="66" step="1" aria-label="Range"> -->
                 </div>
             </form>

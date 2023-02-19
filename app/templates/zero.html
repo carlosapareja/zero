@@ -10,7 +10,7 @@
             <form class="uk-form-horizontal uk-margin-large form-style" action="{{ url_for('zero.pass_generator') }}" method="post">
                 <div class="uk-margin">
                     <div class="uk-inline">
-                        <a id="copy" class="uk-form-icon uk-form-icon-flip" onclick="copyPassword()"><i class="fa-regular fa-clone"></i></a>
+                        <a id="copy" class="uk-form-icon uk-form-icon-flip" onclick="copyPassword()" uk-tooltip="Copy"><i class="fa-regular fa-clone"></i></a>
                         {{ password.password_text(class="uk-input", placeholder="Password") }}
                     </div>
                     <button id="generate" class="uk-button uk-button-default generar"><i class="fa-solid fa-arrows-rotate"></i></button>

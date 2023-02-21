@@ -25,5 +25,5 @@ ZeroPass es una aplicación web, lo que significa que puedes acceder a ella desd
 Si deseas contribuir al desarrollo de ZeroPass, no dudes en hacer un fork del repositorio y enviar pull requests con tus cambios.
 
 <p align="center">
-  <b>Hecho con &#10084; por: Sebastián. </b>
+  <b>Hecho con &#10084; por: Sebastián gei. </b>
 </p>
